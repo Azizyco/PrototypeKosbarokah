@@ -36,7 +36,7 @@
   <main>
     <section id="beranda" class="hero-section container reveal">
       <article class="hero-copy">
-        <p class="pill">✨ Kos Premium Yogyakarta</p>
+        <p class="pill">Kos Barokah</p>
         <h1>Hunian <em>Nyaman</em>, Fasilitas Lengkap di Pusat Kota Yogyakarta</h1>
         <p class="hero-subtext">Kos Barokah menghadirkan hunian bersih, aman, dan strategis untuk mahasiswa maupun pekerja. Nikmati kenyamanan rumah kedua dengan layanan yang responsif.</p>
         <div class="hero-cta">
@@ -50,8 +50,42 @@
         </div>
       </article>
       <article class="hero-visual card-large">
-        <div class="hero-image-placeholder">
-          <i data-lucide="house"></i>
+        <div class="hero-carousel" id="heroCarousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://picsum.photos/seed/kos-exterior/640/420" alt="Tampak depan Kos Barokah" loading="eager">
+              <span class="slide-caption">Tampak Depan Kos Barokah</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://picsum.photos/seed/kos-kamar-nyaman/640/420" alt="Kamar bersih dan nyaman" loading="lazy">
+              <span class="slide-caption">Kamar Bersih &amp; Nyaman</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://picsum.photos/seed/kos-dapur-bersama/640/420" alt="Dapur bersama" loading="lazy">
+              <span class="slide-caption">Dapur Bersama Lengkap</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://picsum.photos/seed/kos-km-bersih/640/420" alt="Kamar mandi bersih" loading="lazy">
+              <span class="slide-caption">Kamar Mandi Terawat</span>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://picsum.photos/seed/kos-area-strategis/640/420" alt="Lokasi strategis" loading="lazy">
+              <span class="slide-caption">Lokasi Strategis Yogyakarta</span>
+            </div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Slide sebelumnya">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="carousel-btn next" aria-label="Slide berikutnya">
+            <i data-lucide="chevron-right"></i>
+          </button>
+          <div class="carousel-dots" role="tablist">
+            <button class="carousel-dot is-active" aria-label="Slide 1"></button>
+            <button class="carousel-dot" aria-label="Slide 2"></button>
+            <button class="carousel-dot" aria-label="Slide 3"></button>
+            <button class="carousel-dot" aria-label="Slide 4"></button>
+            <button class="carousel-dot" aria-label="Slide 5"></button>
+          </div>
         </div>
         <span class="floating-badge">Tersedia <strong id="availableRoomsCount">5</strong> Kamar</span>
       </article>
@@ -77,6 +111,159 @@
           <p class="floorplan-hint">← geser untuk lihat seluruh denah →</p>
           <div class="floorplan-scroll">
             <div id="publicFloorPlan" class="floorplan-target"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri" class="section-block reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Preview Kamar</h2>
+          <p>Lihat suasana nyata kamar dan fasilitas Kos Barokah</p>
+        </header>
+        <div class="kos-toggle" role="tablist" aria-label="Pilih galeri kos">
+          <button class="gallery-tab is-active" data-galeri="putri" role="tab" aria-selected="true">Kos Putri</button>
+          <button class="gallery-tab" data-galeri="putra" role="tab" aria-selected="false">Kos Putra</button>
+        </div>
+
+        <!-- ===== GALERI PUTRI ===== -->
+        <div class="gallery-panel is-active" id="galeri-putri">
+          <div class="gallery-outer">
+            <div class="gallery-track-wrap">
+              <!-- Slide 1: 6 gambar -->
+              <div class="gallery-page">
+                <div class="gallery-mosaic">
+                  <div class="div1 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s1-detail/400/360" alt="Detail kamar putri" loading="lazy">
+                    <span class="gallery-caption">Tampak Dalam Kamar</span>
+                  </div>
+                  <div class="div2 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s1-main/800/480" alt="Kamar standar putri" loading="lazy">
+                    <span class="gallery-caption">Kamar Standar Putri — Kasur, Lemari &amp; Meja Belajar</span>
+                  </div>
+                  <div class="div4 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s1-desk/500/340" alt="Meja belajar putri" loading="lazy">
+                    <span class="gallery-caption">Area Belajar</span>
+                  </div>
+                  <div class="div5 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s1-corridor/700/340" alt="Koridor bersih putri" loading="lazy">
+                    <span class="gallery-caption">Koridor Bersih &amp; Terang</span>
+                  </div>
+                  <div class="div6 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s1-km/600/340" alt="Kamar mandi bersama putri" loading="lazy">
+                    <span class="gallery-caption">Kamar Mandi Bersama</span>
+                  </div>
+                  <div class="div7 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s1-premium/600/360" alt="Kamar premium putri" loading="lazy">
+                    <span class="gallery-caption">Kamar Premium — KM Dalam</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: 4 gambar -->
+              <div class="gallery-page">
+                <div class="gallery-mosaic gallery-mosaic-alt">
+                  <div class="ga1 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s2-dapur/600/500" alt="Dapur bersama putri" loading="lazy">
+                    <span class="gallery-caption">Dapur Bersama Putri</span>
+                  </div>
+                  <div class="ga2 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s2-mushola/400/280" alt="Mushola putri" loading="lazy">
+                    <span class="gallery-caption">Mushola Putri</span>
+                  </div>
+                  <div class="ga3 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s2-cuci/400/280" alt="Area cuci jemur putri" loading="lazy">
+                    <span class="gallery-caption">Area Cuci &amp; Jemur</span>
+                  </div>
+                  <div class="ga4 gallery-item">
+                    <img src="https://picsum.photos/seed/putri-s2-santai/700/300" alt="Area santai putri" loading="lazy">
+                    <span class="gallery-caption">Area Santai Putri</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-nav">
+            <button class="gallery-nav-btn gallery-prev-btn" aria-label="Slide sebelumnya">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="gallery-dots-wrap">
+              <button class="gallery-dot is-active" aria-label="Halaman 1"></button>
+              <button class="gallery-dot" aria-label="Halaman 2"></button>
+            </div>
+            <button class="gallery-nav-btn gallery-next-btn" aria-label="Slide berikutnya">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ===== GALERI PUTRA ===== -->
+        <div class="gallery-panel" id="galeri-putra">
+          <div class="gallery-outer">
+            <div class="gallery-track-wrap">
+              <!-- Slide 1: 6 gambar -->
+              <div class="gallery-page">
+                <div class="gallery-mosaic">
+                  <div class="div1 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s1-detail/400/360" alt="Detail kamar putra" loading="lazy">
+                    <span class="gallery-caption">Tampak Dalam Kamar</span>
+                  </div>
+                  <div class="div2 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s1-main/800/480" alt="Kamar all-in putra" loading="lazy">
+                    <span class="gallery-caption">Kamar All-In Putra — Wifi, Air &amp; Listrik Termasuk</span>
+                  </div>
+                  <div class="div4 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s1-km/500/340" alt="Kamar mandi putra" loading="lazy">
+                    <span class="gallery-caption">Kamar Mandi Bersama (3 Stall)</span>
+                  </div>
+                  <div class="div5 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s1-motor/700/340" alt="Area parkir motor putra" loading="lazy">
+                    <span class="gallery-caption">Area Parkir Motor</span>
+                  </div>
+                  <div class="div6 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s1-dapur/600/340" alt="Dapur bersama putra" loading="lazy">
+                    <span class="gallery-caption">Dapur Bersama — Kompor &amp; Kulkas</span>
+                  </div>
+                  <div class="div7 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s1-garasi/600/360" alt="Garasi luas putra" loading="lazy">
+                    <span class="gallery-caption">Garasi Luas — Muat Mobil &amp; Motor</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: 4 gambar -->
+              <div class="gallery-page">
+                <div class="gallery-mosaic gallery-mosaic-alt">
+                  <div class="ga1 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s2-santai/600/500" alt="Ruang bersama putra" loading="lazy">
+                    <span class="gallery-caption">Ruang Santai Bersama</span>
+                  </div>
+                  <div class="ga2 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s2-wifi/400/280" alt="Area wifi putra" loading="lazy">
+                    <span class="gallery-caption">Wifi 100Mbps</span>
+                  </div>
+                  <div class="ga3 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s2-kulkas/400/280" alt="Kulkas bersama putra" loading="lazy">
+                    <span class="gallery-caption">Kulkas &amp; Peralatan Dapur</span>
+                  </div>
+                  <div class="ga4 gallery-item">
+                    <img src="https://picsum.photos/seed/putra-s2-depan/700/300" alt="Tampak depan kos putra" loading="lazy">
+                    <span class="gallery-caption">Tampak Depan Kos Putra</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-nav">
+            <button class="gallery-nav-btn gallery-prev-btn" aria-label="Slide sebelumnya">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="gallery-dots-wrap">
+              <button class="gallery-dot is-active" aria-label="Halaman 1"></button>
+              <button class="gallery-dot" aria-label="Halaman 2"></button>
+            </div>
+            <button class="gallery-nav-btn gallery-next-btn" aria-label="Slide berikutnya">
+              <i data-lucide="chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
