@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kos Barokah — Hunian Berkah, Hidup Nyaman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="public-page">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a href="#beranda" class="brand">
+        <i data-lucide="house"></i>
+        <span>Kos Barokah</span>
+      </a>
+      <button class="menu-toggle icon-btn" id="menuToggle" aria-label="Buka menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#denah">Denah &amp; Ketersediaan</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#tipe">Tipe Kamar</a>
+        <a href="#kontak">Kontak</a>
+        <a href="admin.html" class="btn btn-secondary">
+          <i data-lucide="shield"></i>
+          Login Admin
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero-section container reveal">
+      <article class="hero-copy">
+        <p class="pill">✨ Kos Premium Yogyakarta</p>
+        <h1>Hunian <em>Nyaman</em>, Fasilitas Lengkap di Pusat Kota Yogyakarta</h1>
+        <p class="hero-subtext">Kos Barokah menghadirkan hunian bersih, aman, dan strategis untuk mahasiswa maupun pekerja. Nikmati kenyamanan rumah kedua dengan layanan yang responsif.</p>
+        <div class="hero-cta">
+          <a href="#denah" class="btn btn-primary">Cek Kamar Kosong</a>
+          <a href="#fasilitas" class="btn btn-secondary">Lihat Fasilitas</a>
+        </div>
+        <div class="hero-stats">
+          <span>20+ Kamar</span>
+          <span>8 Tahun Beroperasi</span>
+          <span>100+ Penghuni Puas</span>
+        </div>
+      </article>
+      <article class="hero-visual card-large">
+        <div class="hero-image-placeholder">
+          <i data-lucide="house"></i>
+        </div>
+        <span class="floating-badge">Tersedia <strong id="availableRoomsCount">5</strong> Kamar</span>
+      </article>
+    </section>
+
+    <section id="denah" class="section-block section-soft reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Denah &amp; Ketersediaan Real-time</h2>
+          <p>Klik kamar untuk lihat detail</p>
+        </header>
+        <div class="kos-toggle" role="tablist" aria-label="Pilih tipe kos">
+          <button class="tab-btn is-active" data-kos="putri" role="tab" aria-selected="true">Kos Putri</button>
+          <button class="tab-btn" data-kos="putra" role="tab" aria-selected="false">Kos Putra</button>
+        </div>
+        <div class="legend">
+          <span><i class="dot status-kosong"></i>Kosong</span>
+          <span><i class="dot status-terisi"></i>Terisi</span>
+          <span><i class="dot status-akan-kosong"></i>Akan kosong</span>
+          <span><i class="dot status-perbaikan"></i>Perbaikan</span>
+        </div>
+        <div class="floorplan-shell">
+          <p class="floorplan-hint">← geser untuk lihat seluruh denah →</p>
+          <div class="floorplan-scroll">
+            <div id="publicFloorPlan" class="floorplan-target"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fasilitas" class="section-block reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Fasilitas Bersama</h2>
+        </header>
+        <div class="kos-toggle small" role="tablist" aria-label="Pilih fasilitas">
+          <button class="facility-tab is-active" data-kos="putri" role="tab" aria-selected="true">Putri</button>
+          <button class="facility-tab" data-kos="putra" role="tab" aria-selected="false">Putra</button>
+        </div>
+        <div id="facilityGrid" class="facility-grid"></div>
+      </div>
+    </section>
+
+    <section id="tipe" class="section-block section-soft reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Pilih Tipe Kamar Anda</h2>
+        </header>
+        <div class="room-type-grid">
+          <article class="room-type-card">
+            <header>
+              <h3>Standar Putri</h3>
+              <p class="price">Rp 3.500.000<span>/tahun</span></p>
+              <p>6 kamar tersedia</p>
+            </header>
+            <ul>
+              <li><i data-lucide="check"></i>Kasur</li>
+              <li><i data-lucide="check"></i>Lemari</li>
+              <li><i data-lucide="check"></i>Meja</li>
+              <li><i data-lucide="check"></i>Akses KM Bersama</li>
+            </ul>
+            <a href="#denah" class="btn btn-secondary">Pilih Kamar Ini</a>
+          </article>
+          <article class="room-type-card featured">
+            <span class="popular-badge">POPULER</span>
+            <header>
+              <h3>Premium Putri</h3>
+              <p class="price">Rp 4.500.000<span>/tahun</span></p>
+              <p>4 kamar tersedia</p>
+            </header>
+            <ul>
+              <li><i data-lucide="check"></i>Kasur, Lemari, Meja</li>
+              <li><i data-lucide="check"></i>KM pribadi dalam kamar</li>
+              <li><i data-lucide="check"></i>Area lebih privat</li>
+              <li><i data-lucide="check"></i>CCTV 24 jam</li>
+            </ul>
+            <a href="#denah" class="btn btn-primary">Pilih Kamar Ini</a>
+          </article>
+          <article class="room-type-card">
+            <header>
+              <h3>All-In Putra</h3>
+              <p class="price">Rp 6.000.000<span>/tahun</span></p>
+              <p>10 kamar all-inclusive</p>
+            </header>
+            <ul>
+              <li><i data-lucide="check"></i>Wifi, air, listrik</li>
+              <li><i data-lucide="check"></i>Akses dapur bersama</li>
+              <li><i data-lucide="check"></i>Garasi luas</li>
+              <li><i data-lucide="check"></i>CCTV 24 jam</li>
+            </ul>
+            <a href="#denah" class="btn btn-secondary">Pilih Kamar Ini</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak" class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <a href="#beranda" class="brand footer-brand">
+          <i data-lucide="house"></i>
+          <span>Kos Barokah</span>
+        </a>
+        <p>Hunian Berkah, Hidup Nyaman</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="#" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+      </section>
+      <section>
+        <h4>Quick Links</h4>
+        <a href="#beranda">Beranda</a>
+        <a href="#denah">Denah</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#tipe">Tipe Kamar</a>
+      </section>
+      <section>
+        <h4>Alamat</h4>
+        <p>Jl. Kaliurang Km 6, Sleman, Yogyakarta</p>
+        <iframe title="Lokasi Kos Barokah" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=jl%20kaliurang%20km%206%20sleman&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kos Barokah · Syarat &amp; Ketentuan · Kebijakan Privasi</p>
+    </div>
+  </footer>
+
+  <div id="publicModal" class="modal-backdrop" aria-hidden="true">
+    <article class="room-modal" role="dialog" aria-modal="true" aria-labelledby="modalRoomTitle">
+      <button id="closeModalBtn" class="icon-btn modal-close" aria-label="Tutup">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-media">
+        <i data-lucide="camera"></i>
+        <span id="modalStatusBadge" class="status-pill">Status</span>
+      </div>
+      <div class="modal-body">
+        <h3 id="modalRoomTitle">Kamar</h3>
+        <p id="modalRoomMeta"></p>
+        <p id="modalRoomPrice" class="modal-price"></p>
+        <div id="modalChips" class="chip-wrap"></div>
+        <div id="modalStatusMessage"></div>
+        <div id="modalActions" class="modal-actions"></div>
+      </div>
+    </article>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/data.js"></script>
+  <script src="js/public.js"></script>
+</body>
+</html>

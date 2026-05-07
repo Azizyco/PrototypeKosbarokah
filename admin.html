@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — Kos Barokah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-page">
+  <button class="menu-toggle icon-btn admin-hamburger" id="adminMenuToggle" aria-label="Buka sidebar">
+    <i data-lucide="menu"></i>
+  </button>
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div>
+      <a href="index.html" class="brand">
+        <i data-lucide="house"></i><span>Kos Barokah</span>
+      </a>
+      <p class="sidebar-caption">ADMIN PANEL</p>
+      <nav class="admin-nav" aria-label="Sidebar admin">
+        <a href="#" class="is-active"><i data-lucide="map"></i>Dashboard Utama</a>
+        <a href="#"><i data-lucide="users"></i>Daftar Penghuni</a>
+        <a href="#"><i data-lucide="bed-double"></i>Manajemen Kamar</a>
+        <a href="#"><i data-lucide="wallet"></i>Keuangan &amp; Tagihan</a>
+        <a href="#"><i data-lucide="settings"></i>Pengaturan</a>
+      </nav>
+    </div>
+    <div class="sidebar-footer">
+      <div class="mini-profile">
+        <span class="avatar">PH</span>
+        <div>
+          <strong>Pak Heri</strong>
+          <small>admin@kosbarokah.id</small>
+        </div>
+      </div>
+      <a href="index.html" class="btn btn-danger-outline"><i data-lucide="log-out"></i>Logout</a>
+    </div>
+  </aside>
+
+  <div class="admin-main">
+    <header class="admin-topbar">
+      <div class="searchbox">
+        <i data-lucide="search"></i>
+        <input id="roomSearchInput" type="text" placeholder="Cari nama penghuni atau nomor kamar...">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn notification-btn" aria-label="Notifikasi">
+          <i data-lucide="bell"></i><span>3</span>
+        </button>
+        <button class="profile-btn" aria-label="Akun admin">
+          <span class="avatar">PH</span> Pak Heri <i data-lucide="chevron-down"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="admin-content">
+      <section class="welcome-banner card reveal">
+        <h1>Selamat datang kembali, Pak Heri 👋</h1>
+        <p><span id="todayDateLabel"></span> · <strong id="liveClock"></strong></p>
+      </section>
+
+      <section class="metric-grid reveal">
+        <article class="metric-card">
+          <div class="metric-icon"><i data-lucide="home"></i></div>
+          <p class="metric-label">Total Kamar Kosong</p>
+          <h3 id="metricVacant">0</h3>
+          <small>dari 20 kamar total</small>
+        </article>
+        <article class="metric-card">
+          <div class="metric-icon"><i data-lucide="users"></i></div>
+          <p class="metric-label">Penghuni Aktif</p>
+          <h3 id="metricActive">0 orang</h3>
+          <small class="positive">+2 bulan ini</small>
+        </article>
+        <article class="metric-card">
+          <div class="metric-icon"><i data-lucide="trending-up"></i></div>
+          <p class="metric-label">Pendapatan Bulan Ini</p>
+          <h3>Rp 45.500.000</h3>
+          <small class="positive">+12% vs bulan lalu</small>
+        </article>
+        <article class="metric-card">
+          <div class="metric-icon alert"><i data-lucide="alert-circle"></i></div>
+          <p class="metric-label">Tunggakan</p>
+          <h3 id="metricDue">0 kamar</h3>
+          <small class="danger">Perlu tindakan</small>
+        </article>
+      </section>
+
+      <section class="reveal">
+        <div class="kos-toggle" role="tablist" aria-label="Pilih kos admin">
+          <button class="admin-kos-tab tab-btn is-active" data-kos="putri">Kos Putri</button>
+          <button class="admin-kos-tab tab-btn" data-kos="putra">Kos Putra</button>
+        </div>
+      </section>
+
+      <section class="card floorplan-center reveal">
+        <header class="card-header">
+          <h2>Peta Denah Real-time</h2>
+          <div class="filter-chips" id="adminFilterChips">
+            <button class="chip is-active" data-filter="semua">Semua</button>
+            <button class="chip" data-filter="kosong">Kosong</button>
+            <button class="chip" data-filter="terisi">Terisi</button>
+            <button class="chip" data-filter="akan-kosong">Akan Kosong</button>
+            <button class="chip" data-filter="perbaikan">Perbaikan</button>
+          </div>
+        </header>
+        <div class="floorplan-scroll">
+          <div id="adminFloorPlan" class="floorplan-target"></div>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <header class="card-header">
+          <h2>Daftar Jatuh Tempo Sewa Minggu Ini</h2>
+          <button class="btn btn-secondary">Lihat Semua</button>
+        </header>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Kamar</th>
+                <th>Nama</th>
+                <th>Tanggal Jatuh Tempo</th>
+                <th>Sisa Hari</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="dueTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <aside id="roomDrawer" class="room-drawer" aria-hidden="true">
+    <header class="drawer-header">
+      <div>
+        <p class="drawer-mini">Informasi Kamar</p>
+        <h3 id="drawerRoomTitle">Kamar</h3>
+      </div>
+      <div class="drawer-header-actions">
+        <span id="drawerStatusBadge" class="status-pill">Status</span>
+        <button id="closeDrawerBtn" class="icon-btn" aria-label="Tutup panel"><i data-lucide="x"></i></button>
+      </div>
+    </header>
+    <div id="drawerBody" class="drawer-body"></div>
+  </aside>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

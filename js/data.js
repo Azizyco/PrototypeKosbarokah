@@ -1,0 +1,39 @@
+/* ===== DATA KOS ===== */
+(function () {
+  const KOS_DATA = {
+    putri: {
+      name: "Kos Putri Barokah",
+      scaleViewBox: "0 0 880 540",
+      rooms: [
+        { id: "P-01", type: "KM Dalam", price: 4500000, size: "3×3 m", status: "kosong", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "KM Dalam"], repairs: [] },
+        { id: "P-02", type: "KM Dalam", price: 4500000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 2, vacantInDays: 0, occupant: { name: "Sari Indah Lestari", initials: "SI", job: "Mahasiswa UGM", phone: "6281212345678", emergency: "Bpk. Ahmad (Ayah) — 08129xxxxxxx" }, paymentStatus: "lunas", dueDate: "10 Mei 2026", dueInDays: 3, features: ["Kasur", "Lemari", "Meja", "KM Dalam"], repairs: [{ date: "12 Feb 2026", note: "Perbaikan keran kamar mandi" }] },
+        { id: "P-03", type: "KM Luar", price: 3500000, size: "3×3 m", status: "akan-kosong", occupancyMonthsLeft: 1, vacantInDays: 14, occupant: { name: "Dwi Rahmawati", initials: "DR", job: "Mahasiswa UPN", phone: "6281311112222", emergency: "Ibu Sinta (Ibu) — 08138xxxxxxx" }, paymentStatus: "lunas", dueDate: "15 Mei 2026", dueInDays: 8, features: ["Kasur", "Lemari", "Meja", "Akses KM Bersama"], repairs: [] },
+        { id: "P-04", type: "KM Luar", price: 3500000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 6, vacantInDays: 0, occupant: { name: "Nita Prameswari", initials: "NP", job: "Karyawan Swasta", phone: "6282222223333", emergency: "Bpk. Eko (Kakak) — 08212xxxxxxx" }, paymentStatus: "lunas", dueDate: "22 Mei 2026", dueInDays: 15, features: ["Kasur", "Lemari", "Meja", "Akses KM Bersama"], repairs: [] },
+        { id: "P-05", type: "KM Dalam", price: 4500000, size: "3×3 m", status: "kosong", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "KM Dalam"], repairs: [] },
+        { id: "P-06", type: "KM Dalam", price: 4500000, size: "3×3 m", status: "perbaikan", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "KM Dalam"], repairs: [{ date: "05 Mei 2026", note: "Pengecatan ulang dinding" }, { date: "06 Mei 2026", note: "Penggantian lampu utama" }] },
+        { id: "P-07", type: "KM Luar", price: 3500000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 4, vacantInDays: 0, occupant: { name: "Maya Lestari", initials: "ML", job: "Freelancer", phone: "6285556667777", emergency: "Ibu Neni (Ibu) — 08566xxxxxxx" }, paymentStatus: "menunggak", dueDate: "04 Mei 2026", dueInDays: -3, features: ["Kasur", "Lemari", "Meja", "Akses KM Bersama"], repairs: [] },
+        { id: "P-08", type: "KM Luar", price: 3500000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 5, vacantInDays: 0, occupant: { name: "Intan Permata", initials: "IP", job: "Mahasiswa UII", phone: "6287778889999", emergency: "Bpk. Ridho (Ayah) — 08122xxxxxxx" }, paymentStatus: "belum-bayar", dueDate: "08 Mei 2026", dueInDays: 1, features: ["Kasur", "Lemari", "Meja", "Akses KM Bersama"], repairs: [] },
+        { id: "P-09", type: "KM Luar", price: 3500000, size: "3×3 m", status: "kosong", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "Akses KM Bersama"], repairs: [] },
+        { id: "P-10", type: "KM Luar", price: 3500000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 8, vacantInDays: 0, occupant: { name: "Lia Oktavia", initials: "LO", job: "Karyawan Swasta", phone: "6281230099001", emergency: "Ibu Rina (Ibu) — 08213xxxxxxx" }, paymentStatus: "lunas", dueDate: "28 Mei 2026", dueInDays: 21, features: ["Kasur", "Lemari", "Meja", "Akses KM Bersama"], repairs: [] }
+      ]
+    },
+    putra: {
+      name: "Kos Putra Barokah",
+      scaleViewBox: "0 0 880 660",
+      rooms: [
+        { id: "L-01", type: "All-In", price: 6000000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 3, vacantInDays: 0, occupant: { name: "Rizky Maulana", initials: "RM", job: "Mahasiswa UGM", phone: "6281122233344", emergency: "Bpk. Hadi (Ayah) — 08121xxxxxxx" }, paymentStatus: "lunas", dueDate: "11 Mei 2026", dueInDays: 4, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-02", type: "All-In", price: 6000000, size: "3×3 m", status: "kosong", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-03", type: "All-In", price: 6000000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 7, vacantInDays: 0, occupant: { name: "Dimas Pratama", initials: "DP", job: "Programmer", phone: "6289988877766", emergency: "Ibu Dewi (Ibu) — 08192xxxxxxx" }, paymentStatus: "menunggak", dueDate: "05 Mei 2026", dueInDays: -2, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-04", type: "All-In", price: 6000000, size: "3×3 m", status: "akan-kosong", occupancyMonthsLeft: 0, vacantInDays: 21, occupant: { name: "Ari Nugroho", initials: "AN", job: "Mahasiswa Sanata Dharma", phone: "6281223344556", emergency: "Bpk. Yudi (Ayah) — 08223xxxxxxx" }, paymentStatus: "lunas", dueDate: "17 Mei 2026", dueInDays: 10, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-05", type: "All-In", price: 6000000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 10, vacantInDays: 0, occupant: { name: "Fajar Ramadhan", initials: "FR", job: "Karyawan Swasta", phone: "6285151515151", emergency: "Ibu Mita (Ibu) — 08191xxxxxxx" }, paymentStatus: "lunas", dueDate: "24 Mei 2026", dueInDays: 17, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-06", type: "All-In", price: 6000000, size: "3×3 m", status: "kosong", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-07", type: "All-In", price: 6000000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 11, vacantInDays: 0, occupant: { name: "Ilham Saputra", initials: "IS", job: "Mahasiswa UII", phone: "6281233445566", emergency: "Ibu Sari (Ibu) — 08132xxxxxxx" }, paymentStatus: "lunas", dueDate: "29 Mei 2026", dueInDays: 22, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-08", type: "All-In", price: 6000000, size: "3×3 m", status: "perbaikan", occupancyMonthsLeft: 0, vacantInDays: 0, occupant: null, paymentStatus: "lunas", dueDate: "-", dueInDays: 0, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [{ date: "04 Mei 2026", note: "Perbaikan plafon bocor" }] },
+        { id: "L-09", type: "All-In", price: 6000000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 1, vacantInDays: 0, occupant: { name: "Bagas Aditya", initials: "BA", job: "Mahasiswa Atma Jaya", phone: "6282122446688", emergency: "Bpk. Bagio (Ayah) — 08211xxxxxxx" }, paymentStatus: "belum-bayar", dueDate: "09 Mei 2026", dueInDays: 2, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] },
+        { id: "L-10", type: "All-In", price: 6000000, size: "3×3 m", status: "terisi", occupancyMonthsLeft: 9, vacantInDays: 0, occupant: { name: "Yusuf Akbar", initials: "YA", job: "Karyawan Swasta", phone: "6289898989898", emergency: "Ibu Nani (Ibu) — 08135xxxxxxx" }, paymentStatus: "lunas", dueDate: "20 Mei 2026", dueInDays: 13, features: ["Kasur", "Lemari", "Meja", "Wifi", "Listrik", "Air"], repairs: [] }
+      ]
+    }
+  };
+
+  window.KOS_DATA = KOS_DATA;
+})();
